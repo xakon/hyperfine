@@ -1,13 +1,13 @@
 SHELL		:= /bin/sh
+INSTALL		?= install
 
 PREFIX		?= /usr/local
 
 TARGET		:= hyperfine
 
-
 install: release
-	cp target/release/${TARGET} ${DESTDIR}/${PREFIX}/bin/
-	strip ${DESTDIR}/${PREFIX}/bin/${TARGET}
+	$(INSTALL)    -d ${DESTDIR}/${PREFIX}/bin
+	$(INSTALL) -s -t ${DESTDIR}/${PREFIX}/bin target/release/${TARGET}
 release:
 	cargo build --release --locked
 
