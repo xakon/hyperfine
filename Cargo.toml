@@ -35,7 +35,7 @@ winapi = { version = "0.3", features = ["processthreadsapi", "minwindef", "winnt
 nix = { version = "0.24.1", features = ["zerocopy"] }
 
 [dependencies.clap]
-version = "3"
+version = "4"
 default-features = false
 features = ["suggestions", "color", "wrap_help", "cargo"]
 
@@ -46,7 +46,7 @@ predicates = "2.1"
 tempfile = "3.3"
 
 [build-dependencies]
-clap = "3"
+clap = "4"
 atty = "0.2"
 clap_complete = "3"
 
