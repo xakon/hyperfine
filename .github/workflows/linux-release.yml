@@ -5,7 +5,7 @@ name: Linux Release
 on: [push]
 jobs:
   create-release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
       - name: Upload Release Archives
         uses: actions/upload-artifact@v2
         with:
-          name: Archives for Ubuntu 18.04
+          name: Archives for Ubuntu 20.04
           path: |
             /tmp/*.tar.gz
             /tmp/*.zip
